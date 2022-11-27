@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/add_review_banner"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/blue_gradient_light"
+            android:contentDescription="@string/add_review_banner_content_description"/>
+
+        <TextView
+            android:id="@+id/add_review_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/menu_add_review"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_review_banner"
+            app:layout_constraintStart_toStartOf="@+id/add_review_banner"
+            app:layout_constraintTop_toTopOf="@+id/add_review_banner"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/add_review_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_review_banner"
+            app:layout_constraintEnd_toEndOf="@+id/add_review_banner"
+            app:layout_constraintStart_toEndOf="@+id/add_review_title"
+            app:layout_constraintTop_toTopOf="@+id/add_review_banner"
+            app:srcCompat="@drawable/ic_menu_add_location"
+            android:contentDescription="@string/add_review_icon_content_description"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_review_location_name_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_review_banner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue">
+            <EditText
+                android:id="@+id/add_review_location_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_grey"
+                android:inputType="text"
+                android:background="@null"
+                android:hint="@string/add_review_location_name_hint"
+                android:autofillHints="@string/add_review_location_name_hint" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RatingBar
+            android:id="@+id/add_review_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_review_location_name_card_view" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add_review_review_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_review_rating_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue">
+
+            <EditText
+                android:id="@+id/add_review_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:gravity="start|top"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_grey"
+                android:background="@null"
+                android:hint="@string/add_review_review_hint"
+                android:autofillHints="@string/add_review_review_hint"
+                android:inputType="textMultiLine" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_review_upload_image_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_style"
+            android:backgroundTint="@color/light_blue"
+            android:text="@string/add_review_upload_image_button_text"
+            app:layout_constraintEnd_toStartOf="@+id/add_review_take_image_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_review_review_card_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@id/add_review_take_image_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_style"
+            android:backgroundTint="@color/light_blue"
+            android:text="@string/add_review_take_image_button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/add_review_upload_image_button"
+            app:layout_constraintTop_toBottomOf="@id/add_review_review_card_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_review_remove_image_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_style"
+            android:backgroundTint="@color/no_red"
+            android:text="@string/add_review_remove_image_button_text"
+            app:layout_constraintTop_toBottomOf="@+id/add_review_review_card_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/add_review_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_review_remove_image_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="6:4"
+            android:contentDescription="@string/add_review_image_content_description" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_review_submit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_style"
+            android:backgroundTint="@color/yes_green"
+            android:text="@string/add_review_submit_button_text"
+            app:layout_constraintTop_toBottomOf="@id/add_review_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

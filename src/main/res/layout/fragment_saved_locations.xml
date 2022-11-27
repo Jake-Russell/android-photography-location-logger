@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/saved_locations_banner"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue_gradient_light" />
+
+    <TextView
+        android:id="@+id/saved_locations_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/menu_saved_locations"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/saved_locations_banner"
+        app:layout_constraintStart_toStartOf="@+id/saved_locations_banner"
+        app:layout_constraintTop_toTopOf="@+id/saved_locations_banner"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/saved_locations_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/saved_locations_banner"
+        app:layout_constraintEnd_toEndOf="@+id/saved_locations_banner"
+        app:layout_constraintStart_toEndOf="@+id/saved_locations_title"
+        app:layout_constraintTop_toTopOf="@+id/saved_locations_banner"
+        app:srcCompat="@drawable/ic_saved"
+        android:contentDescription="@string/saved_locations_icon_content_description" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saved_locations_banner">
+
+        <ListView
+            android:id="@+id/saved_locations_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:divider="@android:color/transparent"/>
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saved_locations_notifications_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_notifications_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/saved_locations_notifications_fab_content_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

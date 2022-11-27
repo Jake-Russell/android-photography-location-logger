@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/home_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue_gradient_light"
+        android:contentDescription="@string/home_banner_content_description" />
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home_banner"
+        app:layout_constraintStart_toStartOf="@+id/home_banner"
+        app:layout_constraintTop_toTopOf="@+id/home_banner"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/home_banner"
+        app:layout_constraintEnd_toEndOf="@+id/home_banner"
+        app:layout_constraintStart_toEndOf="@+id/home_title"
+        app:layout_constraintTop_toTopOf="@+id/home_banner"
+        app:srcCompat="@drawable/photography_location_logger_logo"
+        android:contentDescription="@string/home_icon_content_description" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_button_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/light_blue"
+        android:text="@string/menu_search"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/home_button_saved_locations"
+        app:layout_constraintEnd_toStartOf="@+id/home_button_add_review"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_button_add_review"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/light_blue"
+        android:text="@string/menu_add_review"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/home_button_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_button_search"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_button_saved_locations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/light_blue"
+        android:textColor="@color/white"
+        android:text="@string/menu_saved_locations"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/home_button_help"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_button_search" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_button_help"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/light_blue"
+        android:textColor="@color/white"
+        android:text="@string/menu_help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_button_saved_locations"
+        app:layout_constraintTop_toBottomOf="@+id/home_button_add_review"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
